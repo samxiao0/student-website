@@ -1,0 +1,292 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9d6e5 0%, #b5e8f7 40%, #f7f6c5 70%, #fbc2eb 100%);
+    min-height: 100vh;
+    animation: bgmove 12s ease-in-out infinite alternate;
+}
+@keyframes bgmove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+header {
+    background: linear-gradient(90deg, #ffb6c1 0%, #b5e8f7 100%);
+    color: #fff;
+    padding: 32px 0 24px 0;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    position: relative;
+    backdrop-filter: blur(18px) saturate(180%);
+    border-bottom: 2px solid rgba(255,255,255,0.25);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 8px #fbc2eb, 0 4px 24px #b5e8f7;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 18px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 18px;
+    border-radius: 18px;
+    background: linear-gradient(90deg, #fbc2eb 0%, #b5e8f7 100%);
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background: linear-gradient(90deg, #f7f6c5 0%, #ffb6c1 100%);
+    color: #a084e8;
+    box-shadow: 0 4px 16px #fbc2eb55;
+}
+
+main {
+    padding: 32px 20px 60px 20px;
+    background: linear-gradient(120deg, #fff6fb 60%, #e0c3fc 100%);
+    margin: 32px auto 0 auto;
+    max-width: 800px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px #fbc2eb44;
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 2px solid #fbc2eb55;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #a084e8;
+    margin-bottom: 12px;
+    text-shadow: 0 1px 4px #fbc2eb99;
+}
+
+footer {
+    background: linear-gradient(90deg, #b5e8f7 0%, #a084e8 100%);
+    color: #fff;
+    text-align: center;
+    padding: 14px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 16px #a084e855;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    backdrop-filter: blur(18px) saturate(180%);
+    border-top: 2px solid #fbc2eb55;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    background: linear-gradient(90deg, #fff6fb 60%, #e0c3fc 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px #b5e8f755;
+    backdrop-filter: blur(12px);
+    border: 2px solid #fbc2eb55;
+}
+
+table, th, td {
+    border: none;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+th {
+    background: linear-gradient(90deg, #ffb6c1 0%, #a084e8 100%);
+    color: #fff;
+    font-weight: 700;
+    backdrop-filter: blur(8px);
+}
+
+tr:nth-child(even) td {
+    background: linear-gradient(90deg, #fbc2eb 0%, #b5e8f7 100%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 420px;
+    margin: 0 auto;
+    background: linear-gradient(120deg, #fff6fb 60%, #e0c3fc 100%);
+    padding: 24px 20px;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px #b5e8f755;
+    backdrop-filter: blur(16px);
+    border: 2px solid #fbc2eb55;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1.5px solid #a084e8;
+    font-size: 1rem;
+    background: linear-gradient(90deg, #fff6fb 60%, #e0c3fc 100%);
+    box-shadow: 0 1px 4px #fbc2eb44;
+    transition: border 0.2s, background 0.2s;
+    backdrop-filter: blur(8px);
+}
+
+input:focus, textarea:focus {
+    border: 2px solid #ffb6c1;
+    outline: none;
+    background: #fff;
+}
+
+button {
+    background: linear-gradient(90deg, #a084e8 0%, #ffb6c1 100%);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #b5e8f755;
+    transition: background 0.2s, box-shadow 0.2s;
+    border: 2px solid #a084e8;
+    backdrop-filter: blur(8px);
+}
+
+button:hover, button:focus {
+    background: linear-gradient(90deg, #ffb6c1 0%, #a084e8 100%);
+    box-shadow: 0 4px 16px #fbc2eb88;
+}
+
+/* Theme Switch Styles */
+.theme-switch {
+    position: absolute;
+    top: 18px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+    margin-right: 10px;
+}
+.switch input { display: none; }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, #fbc2eb 0%, #b5e8f7 100%);
+    border-radius: 24px;
+    transition: background 0.3s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; width: 20px;
+    left: 2px; bottom: 2px;
+    background: #a084e8;
+    border-radius: 50%;
+    transition: transform 0.3s, background 0.3s;
+}
+.switch input:checked + .slider {
+    background: linear-gradient(90deg, #232946 0%, #5f72bd 100%);
+}
+.switch input:checked + .slider:before {
+    transform: translateX(24px);
+    background: #ffe6fa;
+}
+#theme-label {
+    font-size: 1rem;
+    color: #a084e8;
+    font-weight: 600;
+    letter-spacing: 1px;
+    user-select: none;
+}
+body.dark-mode #theme-label {
+    color: #ffe6fa;
+}
+
+/* Vibrant Anime Night Mode */
+body.dark-mode {
+    background: linear-gradient(135deg, #232946 0%, #5f72bd 40%, #ff6e7f 100%);
+    color: #ffe6fa;
+}
+body.dark-mode header,
+body.dark-mode footer {
+    background: linear-gradient(90deg, #232946 0%, #5f72bd 100%);
+    color: #ffe6fa;
+    border-color: #ff6e7f88;
+}
+body.dark-mode main {
+    background: linear-gradient(120deg, #232946 60%, #5f72bd 100%);
+    color: #ffe6fa;
+    border-color: #ff6e7f88;
+}
+body.dark-mode nav ul li a {
+    color: #ffe6fa;
+    background: linear-gradient(90deg, #5f72bd 0%, #ff6e7f 100%);
+    border-color: #ff6e7f88;
+}
+body.dark-mode nav ul li a:hover,
+body.dark-mode nav ul li a:focus {
+    background: linear-gradient(90deg, #ff6e7f 0%, #a084e8 100%);
+    color: #fff6fb;
+}
+body.dark-mode table {
+    background: linear-gradient(90deg, #232946 60%, #5f72bd 100%);
+    border-color: #ff6e7f88;
+}
+body.dark-mode th {
+    background: linear-gradient(90deg, #a084e8 0%, #ff6e7f 100%);
+    color: #ffe6fa;
+}
+body.dark-mode tr:nth-child(even) td {
+    background: linear-gradient(90deg, #5f72bd 0%, #ff6e7f 100%);
+}
+body.dark-mode form {
+    background: linear-gradient(120deg, #232946 60%, #5f72bd 100%);
+    border-color: #ff6e7f88;
+}
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode button {
+    background: linear-gradient(90deg, #232946 60%, #5f72bd 100%);
+    color: #ffe6fa;
+    border-color: #a084e8;
+}
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+    background: linear-gradient(90deg, #ff6e7f 0%, #a084e8 100%);
+    border-color: #ffb6c1;
+}
+body.dark-mode button {
+    background: linear-gradient(90deg, #ff6e7f 0%, #a084e8 100%);
+    color: #ffe6fa;
+}
+body.dark-mode button:hover,
+body.dark-mode button:focus {
+    background: linear-gradient(90deg, #a084e8 0%, #ff6e7f 100%);
+}
