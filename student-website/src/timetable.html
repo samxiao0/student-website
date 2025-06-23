@@ -8,14 +8,8 @@
 <body>
     <header>
         <h1>Your Timetable</h1>
-        <div class="theme-switch">
-            <label class="switch">
-                <input type="checkbox" id="theme-toggle">
-                <span class="slider"></span>
-            </label>
-            <span id="theme-label">Day</span>
-        </div>
-        <nav>
+        
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -24,34 +18,95 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Weekly Timetable</h2>
+        
+
+        <!-- Timetable 1 -->
+        <section class="timetable-section">
+            <h2>Class Timetable</h2>
             <table>
                 <tr>
                     <th>Day</th>
-                    <th>9:00 - 10:00</th>
-                    <th>10:00 - 11:00</th>
-                    <th>11:00 - 12:00</th>
+                    <th>9:00-10:00</th>
+                    <th>10:00-11:00</th>
+                    <th>11:00-12:00</th>
+                    <th>12:00-1:00</th>
+                    <th>1:00-2:00</th>
+                    <th>2:00-3:00</th>
+                    <th>3:00-4:00</th>
                 </tr>
                 <tr>
                     <td>Monday</td>
-                    <td>Math</td>
-                    <td>English</td>
-                    <td>Science</td>
+                    <td data-label="9:00-10:00">Math</td>
+                    <td data-label="10:00-11:00">English</td>
+                    <td data-label="11:00-12:00">Science</td>
+                    <td data-label="12:00-1:00">Break</td>
+                    <td data-label="1:00-2:00">History</td>
+                    <td data-label="2:00-3:00">Geography</td>
+                    <td data-label="3:00-4:00">Computer</td>
                 </tr>
                 <tr>
                     <td>Tuesday</td>
-                    <td>History</td>
-                    <td>Math</td>
-                    <td>PE</td>
+                    <td data-label="9:00-10:00">Physics</td>
+                    <td data-label="10:00-11:00">Math</td>
+                    <td data-label="11:00-12:00">English</td>
+                    <td data-label="12:00-1:00">Break</td>
+                    <td data-label="1:00-2:00">Geography</td>
+                    <td data-label="2:00-3:00">Art</td>
+                    <td data-label="3:00-4:00">Sports</td>
                 </tr>
-                <!-- Add more rows as needed -->
+                <tr>
+                    <td>Wednesday</td>
+                    <td data-label="9:00-10:00">Chemistry</td>
+                    <td data-label="10:00-11:00">Math</td>
+                    <td data-label="11:00-12:00">Computer</td>
+                    <td data-label="12:00-1:00">Break</td>
+                    <td data-label="1:00-2:00">Sports</td>
+                    <td data-label="2:00-3:00">English</td>
+                    <td data-label="3:00-4:00">Music</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td data-label="9:00-10:00">Biology</td>
+                    <td data-label="10:00-11:00">English</td>
+                    <td data-label="11:00-12:00">Science</td>
+                    <td data-label="12:00-1:00">Break</td>
+                    <td data-label="1:00-2:00">Art</td>
+                    <td data-label="2:00-3:00">Math</td>
+                    <td data-label="3:00-4:00">Library</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td data-label="9:00-10:00">Math</td>
+                    <td data-label="10:00-11:00">English</td>
+                    <td data-label="11:00-12:00">Science</td>
+                    <td data-label="12:00-1:00">Break</td>
+                    <td data-label="1:00-2:00">Music</td>
+                    <td data-label="2:00-3:00">Computer</td>
+                    <td data-label="3:00-4:00">Sports</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td data-label="9:00-10:00">Sports</td>
+                    <td data-label="10:00-11:00">Library</td>
+                    <td data-label="11:00-12:00">Club</td>
+                    <td data-label="12:00-1:00">Break</td>
+                    <td data-label="1:00-2:00">Free</td>
+                    <td data-label="2:00-3:00">Math</td>
+                    <td data-label="3:00-4:00">English</td>
+                </tr>
             </table>
         </section>
+
+       
     </main>
     <footer>
-        <p>&copy; 2025 Student Portal</p>
+        <p>&copy; 2025 Samxiao</p>
     </footer>
     <script src="js/theme.js"></script>
+    <script>
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.getElementById('main-nav').classList.toggle('open');
+});
+</script>
 </body>
 </html>

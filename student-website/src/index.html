@@ -8,30 +8,80 @@
 <body>
     <header>
         <h1>Welcome to the Student Portal</h1>
-        <nav>
+        
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="timetable.html">Timetable</a></li>
             </ul>
         </nav>
-        <div class="theme-switch">
-            <label class="switch">
-                <input type="checkbox" id="theme-toggle">
-                <span class="slider"></span>
-            </label>
-            <span id="theme-label">Day</span>
-        </div>
+        
     </header>
     <main>
         <section>
             <h2>About This Portal</h2>
             <p>This website is designed exclusively for students to access their timetable and contact information.</p>
         </section>
+        <section class="countdown-widget">
+            <h2>Upcoming Exam Countdown</h2>
+            <label for="countdown-date">Set Exam Date:</label>
+            <input type="date" id="countdown-date">
+            <button id="set-countdown">Set Countdown</button>
+            <div id="exam-countdown"></div>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2025 Student Portal</p>
+        <p>&copy; 2025 Samxiao</p>
     </footer>
     <script src="js/theme.js"></script>
+    <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.getElementById('main-nav').classList.toggle('open');
+    });
+    </script>
+    <script>
+let examDate = localStorage.getItem('examDate')
+    ? new Date(localStorage.getItem('examDate'))
+    : new Date('2025-07-10T09:00:00');
+
+function updateCountdown() {
+    const now = new Date();
+    const diff = examDate - now;
+
+    if (diff <= 0) {
+        document.getElementById('exam-countdown').textContent = "It's exam time!";
+        return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById('exam-countdown').textContent =
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+// Set your password here
+const COUNTDOWN_PASSWORD = "samxiao";
+
+document.getElementById('set-countdown').addEventListener('click', function() {
+    const password = prompt("Enter password to set the countdown:");
+    if (password !== COUNTDOWN_PASSWORD) {
+        alert("Incorrect password. Countdown not changed.");
+        return;
+    }
+    const dateInput = document.getElementById('countdown-date').value;
+    if (dateInput) {
+        examDate = new Date(dateInput + "T09:00:00");
+        localStorage.setItem('examDate', examDate.toISOString());
+        updateCountdown();
+    }
+});
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
 </body>
 </html>

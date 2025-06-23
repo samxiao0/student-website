@@ -2,20 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Student Portal - Contact</title>
+    <title>Contact - Student Portal</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <h1>Contact Us</h1>
-        <div class="theme-switch">
-            <label class="switch">
-                <input type="checkbox" id="theme-toggle">
-                <span class="slider"></span>
-            </label>
-            <span id="theme-label">Day</span>
-        </div>
-        <nav>
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -24,23 +17,25 @@
         </nav>
     </header>
     <main>
-        <h2>Get in Touch</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send Message</button>
-        </form>
+        <section class="contact-section">
+            <h2>Send us a message</h2>
+            <form action="https://formspree.io/f/xdkzwlvq" method="POST">
+                <input type="hidden" name="_redirect" value="index.html">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2025 Student Portal</p>
+        <p>&copy; 2025 Samxiao</p>
     </footer>
-    <script src="js/theme.js"></script>
 </body>
 </html>
